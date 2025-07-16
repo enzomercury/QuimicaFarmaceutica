@@ -1,0 +1,52 @@
+/* Layout principal */
+body {
+  font-family: Arial, sans-serif;
+  margin: 1rem;
+  background: #fff;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de semestres */
+.planilla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Caja grande de cada semestre */
+.semestre {
+  border: 2px solid #e91e63;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.semestre h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #e91e63;
+}
+
+/* Cada materia como caja interna */
+.materia {
+  background: #e91e63;      /* rosa fuerte = pendiente */
+  color: #fff;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, text-decoration 0.3s;
+  text-align: center;
+}
+
+/* Estado “cursada” */
+.materia.cursada {
+  background: #f8bbd0;      /* rosa claro = ya cursada */
+  color: #880e4f;
+  text-decoration: line-through;
+}
